@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     public float speed_movement;
     public float speed_rotation;
     Rigidbody2D rb;
+    public GameObject spark;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,5 +32,11 @@ public class Player : MonoBehaviour
             rb.AddForce(transform.up * vertical * speed_movement * Time.deltaTime);
        
         }
+
+        if(Input.GetButtonDown("Jump"))
+        {
+            Instantiate(spark);
+        }
+
         }
 }

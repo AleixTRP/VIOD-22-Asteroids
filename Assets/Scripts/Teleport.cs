@@ -20,11 +20,11 @@ public class Teleport : MonoBehaviour
         }
         if (transform.position.x > limit_x)
         {
-            transform.position = new Vector3(transform.position.x, -limit_x, transform.position.z);
+            transform.position = new Vector3(-limit_x, transform.position.y, transform.position.z);
         }
-        if (transform.position.x < -limit_y)
+        if (transform.position.x < -limit_x)
         {
-            transform.position = new Vector3(transform.position.x, limit_x, transform.position.z);
+            transform.position = new Vector3(limit_x, transform.position.y, transform.position.z);
         }
     }
 }
